@@ -1,0 +1,46 @@
+@options
+@packages
+@argfile
+--class-path
+'/home/dm2/.m2/repository/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1.jar:/home/dm2/.m2/repository/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1.jar:/home/dm2/.m2/repository/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1.jar:/home/dm2/.m2/repository/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1.jar'
+--module-path
+'/home/dm2/.m2/repository/org/openjfx/javafx-graphics/22.0.1/javafx-graphics-22.0.1-linux.jar:/home/dm2/.m2/repository/org/openjfx/javafx-base/22.0.1/javafx-base-22.0.1-linux.jar:/home/dm2/.m2/repository/org/openjfx/javafx-fxml/22.0.1/javafx-fxml-22.0.1-linux.jar:/home/dm2/IdeaProjects/B/target/classes:/home/dm2/.m2/repository/org/openjfx/javafx-controls/22.0.1/javafx-controls-22.0.1-linux.jar'
+--patch-module
+org.example.b='/home/dm2/IdeaProjects/B/src/main/java'
+-encoding
+'UTF-8'
+-protected
+-source
+'22'
+--module-source-path
+'/home/dm2/IdeaProjects/B/target/site/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/dm2/IdeaProjects/B/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'B 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'B 1.0-SNAPSHOT API'
+org.example.b
+'/home/dm2/IdeaProjects/B/src/main/java/module-info.java'
+/home/dm2/IdeaProjects/B/target/site/apidocs/index.html = 1728642153279
+/home/dm2/IdeaProjects/B/target/site/apidocs/element-list = 1728642153227
+/home/dm2/IdeaProjects/B/target/site/apidocs/help-doc.html = 1728642153283
+/home/dm2/IdeaProjects/B/target/site/apidocs/allpackages-index.html = 1728642153267
+/home/dm2/IdeaProjects/B/target/site/apidocs/tag-search-index.js = 1728642153267
+/home/dm2/IdeaProjects/B/target/site/apidocs/type-search-index.js = 1728642153267
+/home/dm2/IdeaProjects/B/target/site/apidocs/allclasses-index.html = 1728642153267
+/home/dm2/IdeaProjects/B/target/site/apidocs/member-search-index.js = 1728642153267
+/home/dm2/IdeaProjects/B/target/site/apidocs/search.html = 1728642153279
+/home/dm2/IdeaProjects/B/target/site/apidocs/module-search-index.js = 1728642153267
+/home/dm2/IdeaProjects/B/target/site/apidocs/package-search-index.js = 1728642153267
+/home/dm2/IdeaProjects/B/target/site/apidocs/index-all.html = 1728642153279
+/home/dm2/IdeaProjects/B/target/site/apidocs/overview-tree.html = 1728642153255

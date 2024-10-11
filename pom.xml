@@ -71,6 +71,16 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version> <!-- Asegúrate de usar una versión adecuada -->
+                <configuration>
+                    <failOnError>false</failOnError> <!-- Opcional: evitar que falle si hay errores en la documentación -->
+                    <source>22</source> <!-- Establecer la versión de Java -->
+                    <link>https://docs.oracle.com/en/java/javase/22/docs/api/index.html</link> <!-- Enlace a la API de Java -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

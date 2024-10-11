@@ -1,45 +1,57 @@
 package org.example.b;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import org.example.b.Persona;
 
+/**
+ * La clase {@code HelloController} actúa como el controlador para la interfaz
+ * gráfica de la aplicación de gestión de personas. Maneja la interacción entre
+ * los elementos de la interfaz de usuario y la lógica de la aplicación.
+ */
 public class HelloController {
 
     @FXML
-    private TextField txtNombre;
+    private TextField txtNombre; // Campo de texto para ingresar el nombre
     @FXML
-    private TextField txtApellidos;
+    private TextField txtApellidos; // Campo de texto para ingresar los apellidos
     @FXML
-    private TextField txtEdad;
+    private TextField txtEdad; // Campo de texto para ingresar la edad
     @FXML
-    private TableView<Persona> tablaPersonas;
+    private TableView<Persona> tablaPersonas; // Tabla para mostrar la lista de personas
     @FXML
-    private TableColumn<Persona, String> colNombre;
+    private TableColumn<Persona, String> colNombre; // Columna para el nombre
     @FXML
-    private TableColumn<Persona, String> colApellidos;
+    private TableColumn<Persona, String> colApellidos; // Columna para los apellidos
     @FXML
-    private TableColumn<Persona, Integer> colEdad;
+    private TableColumn<Persona, Integer> colEdad; // Columna para la edad
 
     // Lista observable para manejar la tabla
-    private ObservableList<Persona> listaPersonas = FXCollections.observableArrayList();
+    private final ObservableList<Persona> listaPersonas = FXCollections.observableArrayList();
 
-    // Inicializar la tabla y sus columnas
+    /**
+     * Método llamado para inicializar el controlador.
+     * Configura las columnas de la tabla y asigna la lista observable
+     * como modelo de datos para la tabla.
+     */
     @FXML
     public void initialize() {
-        colNombre.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty(cellData.getValue().getNombre()));
-        colApellidos.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty(cellData.getValue().getApellidos()));
-        colEdad.setCellValueFactory(cellData -> new javafx.beans.property.SimpleObjectProperty<>(cellData.getValue().getEdad()));
+        colNombre.setCellValueFactory(cellData ->
+                new javafx.beans.property.SimpleStringProperty(cellData.getValue().getNombre()));
+        colApellidos.setCellValueFactory(cellData ->
+                new javafx.beans.property.SimpleStringProperty(cellData.getValue().getApellidos()));
+        colEdad.setCellValueFactory(cellData ->
+                new javafx.beans.property.SimpleObjectProperty<>(cellData.getValue().getEdad()));
 
         // Asignar la lista observable a la tabla
         tablaPersonas.setItems(listaPersonas);
     }
 
+    /**
+     * Método que se llama al agregar una nueva persona.
+     * Valida la entrada del usuario y añade la persona a la lista si es válida.
+     */
     @FXML
     private void agregarPersona() {
         String nombre = txtNombre.getText();
@@ -74,7 +86,12 @@ public class HelloController {
         }
     }
 
-    // Método para mostrar alertas
+    /**
+     * Método para mostrar alertas en la interfaz de usuario.
+     *
+     * @param titulo el título de la alerta
+     * @param mensaje el mensaje a mostrar en la alerta
+     */
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle(titulo);
